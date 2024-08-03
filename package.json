@@ -3,6 +3,11 @@
 	"version": "1.0.0",
 	"description": "Simple and powerful progress time estimation (ETA)",
 	"keywords": [
+		"backend",
+		"frontend",
+		"CLI",
+		"web",
+		"node",
 		"eta",
 		"estimate",
 		"estimated",
