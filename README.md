@@ -8,12 +8,12 @@ Simple and powerful time estimation (ETA).
 Install with `npm i arrival-time` or `yarn add arrival-time`
 
 ```js
-import {Estimate} from 'arrival-time';
+import { Estimation } from 'arrival-time';
 
-const estimate = new Estimate();
+const estimation = new Estimation();
 
 // Update progress to 25 of 100, and get measurements
-const measure1 = estimate.update(25, 100);
+const measure1 = estimation.update(25, 100);
 console.log("Estimated time", measure1.estimate); // Estimated time 0.8227890000048319
 console.log("Estimated speed", measure1.speed); // Estimated speed 120322.4642033603
 
@@ -60,7 +60,7 @@ Return measurements object
 
 ```js
 {
-	// Time from start estimation
+	// Time when estimation been start
 	timeDelta: 9.841669000000138,
 	// Average time per progress step
 	averageTime: 4.920834500000069,
@@ -68,7 +68,7 @@ Return measurements object
 	progressLeft: 8,
 	// Speed per `tick`
 	speed: 203.21756401276775,
-	// Estimation in ms for complete
+	// Estimate in ms for complete
 	estimate: 39.36667600000055
 }
 ```

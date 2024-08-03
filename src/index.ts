@@ -1,6 +1,6 @@
 type TimeFetcher = () => number;
 
-export class Estimate {
+export class Estimation {
 	private readonly timeFetcher;
 	private readonly state;
 	constructor({

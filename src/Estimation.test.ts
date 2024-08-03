@@ -1,4 +1,4 @@
-import { Estimate } from '.';
+import { Estimation } from '.';
 
 const createCounter = ({
 	value = 0,
@@ -14,7 +14,7 @@ const createCounter = ({
 describe('basic usage', () => {
 	test('4 steps to complete', () => {
 		const timerMock = createCounter();
-		const estimate = new Estimate({ timeFetcher: timerMock });
+		const estimate = new Estimation({ timeFetcher: timerMock });
 
 		expect(estimate.update(25, 100)).toEqual(
 			expect.objectContaining({
@@ -51,7 +51,7 @@ describe('basic usage', () => {
 
 	test('big numbers in progress and total', () => {
 		const timerMock = createCounter();
-		const estimate = new Estimate({ timeFetcher: timerMock });
+		const estimate = new Estimation({ timeFetcher: timerMock });
 
 		expect(estimate.update(25_000_000, 100_000_000)).toEqual(
 			expect.objectContaining({
@@ -88,7 +88,7 @@ describe('basic usage', () => {
 
 	test('reset call increase speed', () => {
 		const timerMock = createCounter();
-		const estimate = new Estimate({ timeFetcher: timerMock });
+		const estimate = new Estimation({ timeFetcher: timerMock });
 
 		expect(estimate.update(25, 100)).toEqual(
 			expect.objectContaining({
@@ -128,7 +128,7 @@ describe('basic usage', () => {
 
 describe('cases with real timer', () => {
 	test('100 steps to complete', () => {
-		const estimate = new Estimate({ timeFetcher: () => performance.now() });
+		const estimate = new Estimation({ timeFetcher: () => performance.now() });
 
 		for (
 			let state = { progress: 1, total: 100 };
