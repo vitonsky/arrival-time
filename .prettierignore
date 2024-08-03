@@ -1,0 +1,13 @@
+# thirdparty
+node_modules
+
+# artifacts
+/out
+/dist
+/build
+
+# files
+*.d.ts
+*.html
+*.md
+package-lock.json

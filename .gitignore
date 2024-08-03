@@ -1,0 +1,30 @@
+# packages
+node_modules
+.npmrc
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.tsbuildinfo
+
+# testing
+coverage
+
+# editors
+.idea
+.vscode
+debug.log
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env
+*.local
+
+# artifacts
+out
+dist
