@@ -1,6 +1,25 @@
 {
 	"name": "arrival-time",
 	"version": "0.0.1",
+	"description": "Simple and powerful progress time estimation (ETA)",
+	"keywords": [
+		"eta",
+		"estimate",
+		"estimated",
+		"time",
+		"estimated time",
+		"estimated-time",
+		"progress",
+		"progress eta",
+		"progress-eta"
+	],
+	"license": "MIT",
+	"author": "Robert Vitonsky <https://github.com/vitonsky>",
+	"homepage": "https://github.com/vitonsky/arrival-time",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vitonsky/arrival-time"
+	},
 	"scripts": {
 		"test": "jest",
 		"test-fast": "TEST_FAST=true jest",
