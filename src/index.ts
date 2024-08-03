@@ -24,7 +24,7 @@ export class Estimate {
 	}
 
 	public reset(time?: number) {
-		return (this.state.startTime = time !== undefined ? time : this.now());
+		this.state.startTime = time !== undefined ? time : this.now();
 	}
 
 	public update(progress: number, total?: number) {
