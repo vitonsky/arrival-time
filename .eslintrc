@@ -14,6 +14,7 @@
 	"plugins": [
 		"@typescript-eslint",
 		"unused-imports",
+		"spellcheck",
 		"simple-import-sort"
 	],
 	"extends": [
@@ -24,7 +25,6 @@
 	],
 	"rules": {
 		// turn on errors for missing imports
-		"local-rules/proper-import-aliases": "error",
 		"import/no-unresolved": "error",
 		"spellcheck/spell-checker": [
 			"error",
