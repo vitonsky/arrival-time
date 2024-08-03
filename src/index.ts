@@ -1,5 +1,9 @@
 type TimeFetcher = () => number;
 
+// Fallback to `Date` for node 14
+export const defaultClock = () =>
+	typeof performance !== 'undefined' ? performance.now() : new Date().getTime();
+
 export class Estimation {
 	private readonly timeFetcher;
 	private readonly state;
@@ -14,7 +18,7 @@ export class Estimation {
 		startTime?: number;
 		timeFetcher?: TimeFetcher;
 	} = {}) {
-		this.timeFetcher = timeFetcher ?? (() => performance.now());
+		this.timeFetcher = timeFetcher ?? defaultClock;
 
 		this.state = {
 			progress,
