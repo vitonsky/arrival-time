@@ -1,6 +1,8 @@
 Simple and powerful time estimation (ETA).
 
-- Zero dependencies
+Ideal to draw progress in CLI, web and mobile.
+
+- Zero dependencies. Works everywhere - node, browsers, toaster, etc.
 - ETA, speed measurements and average step time estimation
 
 # Usage
