@@ -125,3 +125,19 @@ describe('basic usage', () => {
 		);
 	});
 });
+
+describe('cases with real timer', () => {
+	test('100 steps to complete', () => {
+		const estimate = new Estimate({ timeFetcher: () => performance.now() });
+
+		for (
+			let state = { progress: 1, total: 100 };
+			state.progress <= state.total;
+			state.progress += 1
+		) {
+			const measures = estimate.update(state.progress, state.total);
+			expect(measures.speed).toBeGreaterThan(1000);
+			expect(measures.averageTime).toBeLessThan(0.5);
+		}
+	});
+});
