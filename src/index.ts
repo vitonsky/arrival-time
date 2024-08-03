@@ -1,14 +1,23 @@
+type TimeFetcher = () => number;
+
 export class Estimate {
+	private readonly timeFetcher = () => performance.now();
 	private readonly state;
 	constructor({
 		progress = 0,
 		total = 100,
 		startTime,
+		timeFetcher,
 	}: {
 		progress?: number;
 		total?: number;
 		startTime?: number;
+		timeFetcher?: TimeFetcher;
 	} = {}) {
+		if (timeFetcher) {
+			this.timeFetcher = timeFetcher;
+		}
+
 		this.state = {
 			progress,
 			total,
@@ -53,6 +62,6 @@ export class Estimate {
 	}
 
 	public now() {
-		return performance.now();
+		return this.timeFetcher();
 	}
 }
