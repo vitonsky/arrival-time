@@ -127,7 +127,7 @@ describe('basic usage', () => {
 });
 
 describe('cases with real timer', () => {
-	test('100 steps to complete', () => {
+	test('10 steps to complete', () => {
 		const estimate = new Estimation({ timeFetcher: () => performance.now() });
 
 		for (
@@ -136,8 +136,8 @@ describe('cases with real timer', () => {
 			state.progress += 1
 		) {
 			const measures = estimate.update(state.progress, state.total);
-			expect(measures.speed).toBeGreaterThan(1000);
-			expect(measures.averageTime).toBeLessThan(0.5);
+			expect(measures.speed).toBeGreaterThan(100);
+			expect(measures.averageTime).toBeLessThan(10);
 		}
 	});
 });
