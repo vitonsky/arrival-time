@@ -1,6 +1,6 @@
 {
 	"name": "arrival-time",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Simple and powerful progress time estimation (ETA)",
 	"keywords": [
 		"backend",
