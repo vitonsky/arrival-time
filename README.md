@@ -5,6 +5,8 @@ Ideal to draw progress in CLI, web and mobile.
 - Zero dependencies. Works everywhere - node, browsers, toaster, etc.
 - ETA, speed measurements and average step time estimation
 
+![](./docs/eta.gif)
+
 # Usage
 
 Install with `npm i arrival-time` or `yarn add arrival-time`
@@ -82,3 +84,8 @@ Return `estimate` value
 ### reset(time?: number)
 
 Reset start time to current time
+
+# Related projects
+
+- [humanize-duration](https://www.npmjs.com/package/humanize-duration) - converts time in ms to human readable time
+- [log-update](https://www.npmjs.com/package/log-update) - print and redraw messages to stdout
