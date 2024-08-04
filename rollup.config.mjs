@@ -8,7 +8,10 @@ export default {
 		format: 'cjs',
 	},
 	plugins: [
-		typescript(),
+		typescript({
+			declaration: true,
+			declarationDir: "dist/types"
+		}),
 		copy({
 			targets: [
 				{
