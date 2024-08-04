@@ -48,6 +48,7 @@ function copyMetaFiles() {
 		gulp.src(['package.json']).pipe(cleanPackageJson()),
 		// Copy other
 		gulp.src(['README.md', 'LICENSE']),
+		gulp.src(['docs/*']).pipe(gulp.dest(buildDir + '/docs')),
 	).pipe(gulp.dest(buildDir));
 }
 
