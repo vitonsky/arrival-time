@@ -48,7 +48,8 @@ function copyMetaFiles() {
 		gulp.src(['package.json']).pipe(cleanPackageJson()),
 		// Copy other
 		gulp.src(['README.md', 'LICENSE']),
-		gulp.src(['docs/*']).pipe(gulp.dest(buildDir + '/docs')),
+		// Disable encoding for images https://github.com/gulpjs/gulp/issues/2803#issuecomment-2106926786
+		gulp.src(['docs/*'], { encoding: false }).pipe(gulp.dest(buildDir + '/docs')),
 	).pipe(gulp.dest(buildDir));
 }
 
