@@ -1,4 +1,27 @@
-type TimeFetcher = () => number;
+export type TimeFetcher = () => number;
+
+export type Measurements = {
+	/**
+	 * Time delta between start time and current time
+	 */
+	timeDelta: number;
+	/**
+	 * Average time per one progress step
+	 */
+	averageTime: number;
+	/**
+	 * Left progress
+	 */
+	progressLeft: number;
+	/**
+	 * Progression per `tick` (default 1000ms)
+	 */
+	speed: number;
+	/**
+	 * Estimated time in ms until complete
+	 */
+	estimate: number;
+};
 
 // Fallback to `Date` for node 14
 export const defaultClock = () =>
@@ -45,7 +68,7 @@ export class Estimation {
 		return this.measure().estimate;
 	}
 
-	public measure(tick = 1000) {
+	public measure(tick = 1000): Measurements {
 		const { progress, total } = this.state;
 
 		const timeDelta = this.now() - this.state.startTime;
