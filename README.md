@@ -18,8 +18,8 @@ const estimation = new Estimation();
 
 // Update progress to 25 of 100, and get measurements
 const measure1 = estimation.update(25, 100);
-console.log("Estimated time", measure1.estimate); // Estimated time 0.8227890000048319
-console.log("Estimated speed", measure1.speed); // Estimated speed 120322.4642033603
+console.log("Estimated time", measure1.estimate); // Estimated time 0.11754299999961404
+console.log("Estimated speed", measure1.speed); // Estimated speed 638064.3679355322
 
 console.log(measure1);
 // {
