@@ -18,25 +18,25 @@ const estimation = new Estimation();
 
 // Update progress to 25 of 100, and get measurements
 const measure1 = estimation.update(25, 100);
-console.log("Estimated time", measure1.estimate); // Estimated time 0.8227890000048319
-console.log("Estimated speed", measure1.speed); // Estimated speed 120322.4642033603
+console.log("Estimated time", measure1.estimate); // Estimated time 0.11754299999961404
+console.log("Estimated speed", measure1.speed); // Estimated speed 638064.3679355322
 
 console.log(measure1);
 // {
-// 	timeDelta: 0.008311000000048807,
-// 	averageTime: 0.008311000000048807,
-// 	progressLeft: 99,
-// 	speed: 120322.4642033603,
-// 	estimate: 0.8227890000048319
+// 	timeDelta: 0.039180999999871347,
+// 	averageTime: 0.0015672399999948539,
+// 	progressLeft: 75,
+// 	speed: 638064.3679355322,
+// 	estimate: 0.11754299999961404
 // }
 
-console.log(estimate.update(50, 100))
+console.log(estimation.update(50, 100))
 // {
-// 	timeDelta: 9.841669000000138,
-// 	averageTime: 4.920834500000069,
+// 	timeDelta: 12.311336999999867,
+// 	averageTime: 0.24622673999999733,
 // 	progressLeft: 50,
-// 	speed: 203.21756401276775,
-// 	estimate: 39.36667600000055
+// 	speed: 4061.297322947178,
+// 	estimate: 12.311336999999867
 // }
 ```
 
@@ -58,23 +58,39 @@ type Options = {
 };
 ```
 
+### update(progress: number, total?: number)
+
+Update current progress, and optionally update total progress.
+
+Returns updated object with measurements.
+
 ### measure(tick = 1000)
 
 Return measurements object
 
-```js
-{
-	// Time when estimation been start
-	timeDelta: 9.841669000000138,
-	// Average time per progress step
-	averageTime: 4.920834500000069,
-	// Left progress
-	progressLeft: 8,
-	// Speed per `tick`
-	speed: 203.21756401276775,
-	// Estimate in ms for complete
-	estimate: 39.36667600000055
-}
+```ts
+type Measurements = {
+	/**
+	 * Time delta between start time and current time
+	 */
+	timeDelta: number;
+	/**
+	 * Average time per one progress step
+	 */
+	averageTime: number;
+	/**
+	 * Left progress
+	 */
+	progressLeft: number;
+	/**
+	 * Progression per `tick` (default 1000ms)
+	 */
+	speed: number;
+	/**
+	 * Estimated time in ms until complete
+	 */
+	estimate: number;
+};
 ```
 
 ### estimate()
@@ -83,7 +99,11 @@ Return `estimate` value
 
 ### reset(time?: number)
 
-Reset start time to current time
+Reset start time to provided or current time
+
+### now()
+
+Return current timestamp
 
 # Related projects
 
