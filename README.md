@@ -58,6 +58,12 @@ type Options = {
 };
 ```
 
+### update(progress: number, total?: number)
+
+Update current progress, and optionally update total progress.
+
+Returns updated object with measurements.
+
 ### measure(tick = 1000)
 
 Return measurements object
@@ -84,6 +90,10 @@ Return `estimate` value
 ### reset(time?: number)
 
 Reset start time to current time
+
+### now()
+
+Return current timestamp
 
 # Related projects
 
