@@ -65,15 +65,15 @@ Return measurements object
 ```js
 {
 	// Time when estimation been start
-	timeDelta: 9.841669000000138,
+	timeDelta: 12.311336999999867,
 	// Average time per progress step
-	averageTime: 4.920834500000069,
+	averageTime: 0.24622673999999733,
 	// Left progress
-	progressLeft: 8,
+	progressLeft: 50,
 	// Speed per `tick`
-	speed: 203.21756401276775,
+	speed: 4061.297322947178,
 	// Estimate in ms for complete
-	estimate: 39.36667600000055
+	estimate: 12.311336999999867
 }
 ```
 
