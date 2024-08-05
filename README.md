@@ -68,19 +68,29 @@ Returns updated object with measurements.
 
 Return measurements object
 
-```js
-{
-	// Time when estimation been start
-	timeDelta: 12.311336999999867,
-	// Average time per progress step
-	averageTime: 0.24622673999999733,
-	// Left progress
-	progressLeft: 50,
-	// Speed per `tick`
-	speed: 4061.297322947178,
-	// Estimate in ms for complete
-	estimate: 12.311336999999867
-}
+```ts
+type Measurements = {
+	/**
+	 * Time delta between start time and current time
+	 */
+	timeDelta: number;
+	/**
+	 * Average time per one progress step
+	 */
+	averageTime: number;
+	/**
+	 * Left progress
+	 */
+	progressLeft: number;
+	/**
+	 * Progression per `tick` (default 1000ms)
+	 */
+	speed: number;
+	/**
+	 * Estimated time in ms until complete
+	 */
+	estimate: number;
+};
 ```
 
 ### estimate()
@@ -89,7 +99,7 @@ Return `estimate` value
 
 ### reset(time?: number)
 
-Reset start time to current time
+Reset start time to provided or current time
 
 ### now()
 
