@@ -23,20 +23,20 @@ console.log("Estimated speed", measure1.speed); // Estimated speed 120322.464203
 
 console.log(measure1);
 // {
-// 	timeDelta: 0.008311000000048807,
-// 	averageTime: 0.008311000000048807,
-// 	progressLeft: 99,
-// 	speed: 120322.4642033603,
-// 	estimate: 0.8227890000048319
+// 	timeDelta: 0.039180999999871347,
+// 	averageTime: 0.0015672399999948539,
+// 	progressLeft: 75,
+// 	speed: 638064.3679355322,
+// 	estimate: 0.11754299999961404
 // }
 
-console.log(estimate.update(50, 100))
+console.log(estimation.update(50, 100))
 // {
-// 	timeDelta: 9.841669000000138,
-// 	averageTime: 4.920834500000069,
+// 	timeDelta: 12.311336999999867,
+// 	averageTime: 0.24622673999999733,
 // 	progressLeft: 50,
-// 	speed: 203.21756401276775,
-// 	estimate: 39.36667600000055
+// 	speed: 4061.297322947178,
+// 	estimate: 12.311336999999867
 // }
 ```
 
